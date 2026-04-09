@@ -1,8 +1,8 @@
-#include <libft.h>
+#include "libft.h"
 
-int ft_strncmp (const char *s1, const char *s2, unsigned int n)
+int ft_strncmp (const char *s1, const char *s2, size_t n)
 {
-    int i;
+    size_t  i;
 
     if (n == 0)
         return (0);

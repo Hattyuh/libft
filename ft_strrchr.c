@@ -1,4 +1,4 @@
-#include <libft.h>
+#include "libft.h"
 
 char    *ft_strrchr(const char *str, int c)
 {
@@ -10,10 +10,10 @@ char    *ft_strrchr(const char *str, int c)
     while (str[i])
     {
         if (str[i] == c)
-            ptr = &str[i];
+            ptr = (char *)&str[i];
         i++;
     }
     if (c == '\0')
-        ptr = &str[i];
+        ptr = (char *)&str[i];
     return (ptr);
 }
