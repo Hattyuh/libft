@@ -3,6 +3,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <stding.h>
 
 int             ft_isupper(int c);
 int             ft_islower(int c);
