@@ -17,7 +17,7 @@ int             ft_isprint(int c);
 int             ft_atoi(const char *str);
 char            *ft_strchr(const char *str, int c);
 char            *ft_strrchr(const char *str, int c);
-unsigned int    ft_strlen(const char *str);
+size_t          ft_strlen(const char *str);
 int             ft_strncmp (const char *s1, const char *s2, size_t n);
 char            *ft_strdup(const char *str);
 void            *ft_calloc(size_t number, size_t size);
