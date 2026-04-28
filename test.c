@@ -18,7 +18,7 @@ int main(void)
     char    *strlen_str = "123456789";
     printf("Testing strlen\n");
     printf("String: %s\n", strlen_str);
-    printf("Length: %i\n", ft_strlen(strlen_str));
+    printf("Length: %li\n", ft_strlen(strlen_str));
     printf("\n");
 
     //MEMSET
