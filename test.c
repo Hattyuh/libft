@@ -33,7 +33,7 @@ int main(void)
     char    bzero_str[] = "123456789";
     printf("Testing bzero\n");
     printf("before:  %s\n", bzero_str);
-    ft_memset(bzero_str, 'X', 8);
+    ft_bzero(bzero_str, 8);
     printf("after:   %s\n", bzero_str);
     printf("\n");
 
