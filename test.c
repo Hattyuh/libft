@@ -102,13 +102,18 @@ int main(void)
     c = 'N';
     printf("TESTING: %c\n", c);
     printf("tolower: %c\n", ft_tolower(c));
- 
+    printf("\n");
+
     //STRCHR
     //STRRCHR
     //STRCMP
     //MEMCHR
     //STRNSTR
     //ATOI
+    char    *atoi_nbr;
+    atoi_nbr = "   5 423sdsad";
+    printf("%i\n", ft_atoi(atoi_nbr));
+    
     //CALLOC
     //STRDUP
  
