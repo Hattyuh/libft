@@ -1,9 +1,169 @@
 #include "libft.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+
+void    ft_procceed(size_t sec)
+{
+    int i;
+
+    i = 0;
+    while (i < 3)
+    {
+        write(1, ".", 1);
+        usleep(sec);
+        write(1, " ", 1);
+        i++;
+    }
+    write(1, "\n", 1);
+}
 
 int main(void)
 {
+    char    control_input;
+    char    test_input;
+    char    str_input[100];
+    int     part_count;
+    int     test_count;
+    int     version_count;
+  
+    printf("Welcome to my libft manual tester program\n");
+    ft_procceed(250000);
+    printf("Let me explain how it works\n");
+    ft_procceed(250000);
+    printf("At each exercise test, you will be prompted to give input\n");
+    ft_procceed(250000);
+    printf("Then you will see the function result\n");
+    ft_procceed(250000);
+    printf("You can test again with    [r]\n");
+    ft_procceed(250000);
+    printf("You can test the next with [c]\n");
+    ft_procceed(250000);
+    printf("Please press [ENTER] to start testing");
+    while(control_input != '\n')
+        control_input = getchar();
+    ft_procceed(250000);
+
+    part_count = 1;
+    test_count = 0;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        test_input = '0';
+        control_input = '0';
+
+        printf("Test %d.%d.%d - isalpha\n", part_count, test_count, version_count);
+        printf("Enter a char to test: ");
+        scanf(" %c", &test_input);
+        printf("isalpha: %i\n", ft_isalpha(test_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+
+    test_count++;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        test_input = '0';
+        control_input = '0';
+
+        printf("Test %d.%d.%d - isdigit\n", part_count, test_count, version_count);
+        printf("Enter a char to test: ");
+        scanf(" %c", &test_input);
+        printf("isdigit: %i\n", ft_isdigit(test_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+
+    test_count++;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        test_input = '0';
+        control_input = '0';
+
+        printf("Test %d.%d.%d - isalnum\n", part_count, test_count, version_count);
+        printf("Enter a char to test: ");
+        scanf(" %c", &test_input);
+        printf("isalnum: %i\n", ft_isalnum(test_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+
+    test_count++;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        test_input = '0';
+        control_input = '0';
+
+        printf("Test %d.%d.%d - isascii\n", part_count, test_count, version_count);
+        printf("Enter a char to test: ");
+        scanf(" %c", &test_input);
+        printf("isascii: %i\n", ft_isascii(test_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+
+    test_count++;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        test_input = '0';
+        control_input = '0';
+
+        printf("Test %d.%d.%d - isprint\n", part_count, test_count, version_count);
+        printf("Enter a char to test: ");
+        scanf(" %c", &test_input);
+        printf("isprint: %i\n", ft_isprint(test_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+
+    test_count++;
+    version_count = 0;
+    control_input = '0';
+    while(control_input != 'c')
+    {
+        version_count++;
+        control_input = '0';
+
+        printf("Test %d.%d.%d - strlen\n", part_count, test_count, version_count);
+        printf("Enter a string to test: ");
+        scanf(" %s", str_input);
+        printf("strlen: %li\n", ft_strlen(str_input));
+        
+        printf("Please enter [c] to continue or [r] to retest: ");
+        while (control_input != 'c' && control_input != 'r')
+            scanf(" %c", &control_input);
+        printf("\n");
+    }
+/*
 //PART I
     //Character classification function test
     char    c;
@@ -111,10 +271,13 @@ int main(void)
     //STRNSTR
     //ATOI
     char    *atoi_nbr;
+    printf("Testing atoi\n");
     atoi_nbr = "   5 423sdsad";
     printf("%i\n", ft_atoi(atoi_nbr));
-    
+    printf("\n");
+
     //CALLOC
+    
     //STRDUP
  
 //PART 2
@@ -145,5 +308,7 @@ int main(void)
 
 //PART 4
     //TODO: add README
+    
+*/
     return (0);
 }
