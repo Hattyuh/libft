@@ -38,12 +38,12 @@ int main(void)
     char    *ptr;
 
     printf("Testing bzero\n");
-    write(0, "before:  ", 9);
+    write(1, "before:  ", 9);
     ptr = bzero_str;
     i = 0;
     while (i < 9)
     {
-        write(0, ptr, 1);
+        write(1, ptr, 1);
         ptr++;
         i++;
     }
@@ -51,12 +51,12 @@ int main(void)
 
     ft_bzero(bzero_str, 2);
 
-    write(0, "after:   ", 9);
+    write(1, "after:   ", 9);
     ptr = bzero_str;
     i = 0;
     while (i < 9)
     {
-        write(0, ptr, 1);
+        write(1, ptr, 1);
         ptr++;
         i++;
     }
@@ -67,12 +67,12 @@ int main(void)
     char    memcpy_deststr[] = "        ";
     
     printf("Testing memcpy\n");
-    write(0, "Source text: ", 13);
+    write(1, "Source text: ", 13);
     ptr = memcpy_srcstr;
     i = 0;
     while (i < 9)
     {
-        write(0, ptr, 1);
+        write(1, ptr, 1);
         ptr++;
         i++;
     }
@@ -80,17 +80,18 @@ int main(void)
     
     ft_memcpy(memcpy_deststr, memcpy_srcstr, 5);
     
-    write(0, "Dest text:   ", 13);
+    write(1, "Dest text:   ", 13);
     ptr = memcpy_deststr;
     i = 0;
     while (i < 9)
     {
-        write(0, ptr, 1);
+        write(1, ptr, 1);
         ptr++;
         i++;
     }
     printf("\n\n");
 
+    //MEMMOVE
     //STRLCPY
     //STRLCAT
 
