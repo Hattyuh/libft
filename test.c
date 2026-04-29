@@ -1,5 +1,6 @@
 #include "libft.h"
 #include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
@@ -15,6 +16,7 @@ int main(void)
     printf("isascii: %i\n", ft_isascii(c));
     printf("isprint: %i\n", ft_isprint(c));
     printf("\n");
+
     //STRLEN
     char    *strlen_str = "123456789";
     printf("Testing strlen\n");
@@ -33,10 +35,29 @@ int main(void)
     //BZERO
     char    bzero_str[] = "123456789";
     printf("Testing bzero\n");
-    printf("before:  %s\n", bzero_str);
-    ft_bzero(bzero_str, 8);
-    printf("after:   %s\n", bzero_str);
+    write(0, "before:  ", 9);
+    int i;
+    i = 0;
+    char    *ptr;
+    ptr = bzero_str;
+    while (i < 9)
+    {
+        write(0, ptr, 1);
+        ptr++;
+        i++;
+    }
     printf("\n");
+    ft_bzero(bzero_str, 2);
+    ptr = bzero_str;
+    write(0, "after:   ", 9);
+    i = 0;
+    while (i < 9)
+    {
+        write(0, ptr, 1);
+        ptr++;
+        i++;
+    }
+    printf("\n\n");
 
     //MEMCPY
     //MEMCPY
