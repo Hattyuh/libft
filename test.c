@@ -3,6 +3,7 @@
 
 int main(void)
 {
+//PART I
     //Character classification function test
     char    c;
     c = '5';
@@ -37,6 +38,11 @@ int main(void)
     printf("after:   %s\n", bzero_str);
     printf("\n");
 
+    //MEMCPY
+    //MEMCPY
+    //STRLCPY
+    //STRLCAT
+
     //TOUPPER AND TOLOWER
     c = 'n';
     printf("TESTING: %c\n", c);
@@ -44,6 +50,43 @@ int main(void)
     c = 'N';
     printf("TESTING: %c\n", c);
     printf("tolower: %c\n", ft_tolower(c));
-    
+ 
+    //STRCHR
+    //STRRCHR
+    //STRCMP
+    //MEMCHR
+    //STRNSTR
+    //ATOI
+    //CALLOC
+    //STRDUP
+ 
+//PART 2
+
+    //SUBSTR
+    //STRJOIN
+    //STRTRIM
+    //SPLIT
+    //ITOA
+    //STRMAPI
+    //STRITERI
+    //PUTCHAR_FD
+    //PUTSTR_FD
+    //PUTENDL_FD
+    //PUTNBR_FD
+
+//PART 3
+
+    //LSTNEW
+    //LSTADD_FRONT
+    //LSTSIZE
+    //LSTLAST
+    //LSTADD_BACK
+    //LSTDELONE
+    //LSTCLEAR
+    //LSTITER
+    //LSTMAP
+
+//PART 4
+    //TODO: add README
     return (0);
 }
