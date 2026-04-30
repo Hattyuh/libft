@@ -14,3 +14,16 @@ void    *ft_memset(void *s, int c, size_t n)
     }
     return ((void *)ptr);
 }
+/*
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+    if (argc == 4)
+    {
+        printf("before:  %s\n", argv[1]);
+        ft_memset(argv[1], argv[2][0], atoi(argv[3]));
+        printf("after:   %s\n", argv[1]);
+    }
+    return(0);
+}
+*/

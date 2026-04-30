@@ -17,3 +17,20 @@ char    *ft_strdup(const char *str)
 	dup[i] = '\0';
 	return (dup);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char **argv)
+{
+	char	*new_str;
+
+    if (argc == 2)
+    {
+        printf("Source string: %s, Source adress: %p\n", argv[1], &argv[1]);
+		new_str = ft_strdup(argv[1]);
+		printf("Dupped string: %s, Dupped adress: %p\n", new_str, &new_str);
+		free(new_str);
+    }
+    return(0);
+}
+*/
