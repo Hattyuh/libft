@@ -17,3 +17,13 @@ char    *ft_strrchr(const char *str, int c)
         ptr = (char *)&str[i];
     return (ptr);
 }
+/*
+#include <stdio.h>
+int main(int argc, char **argv)
+{
+    if (argc == 3)
+        if (ft_strrchr(argv[1], argv[2][0]))
+            printf("%s\n", ft_strrchr(argv[1], argv[2][0]));
+    return (0);
+}
+*/
