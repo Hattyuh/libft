@@ -1,5 +1,5 @@
 CC = gcc
-NAME = test
+NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)

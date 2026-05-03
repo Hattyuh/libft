@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkosa <rkosa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/01 10:56:09 by rkosa             #+#    #+#             */
-/*   Updated: 2026/05/02 11:40:28 by rkosa            ###   ########.fr       */
+/*   Created: 2026/05/03 17:13:30 by rkosa             #+#    #+#             */
+/*   Updated: 2026/05/03 17:13:31 by rkosa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+	write(fd, &c, 1);
 }
-// #include "libft.h"
-// #include <stdio.h>
-// #include <ctype.h>
+
 // int main(void)
 // {
-// 	int	c = 97;
-// 	printf("Tested data:      %c - %d\n", c, c);
-// 	printf("Original toupper: %c - %d\n", toupper(c), toupper(c));
-// 	printf("My toupper:       %c - %d\n", ft_toupper(c), ft_toupper(c));
-// 	return(0);
+//     char    c = '#';
+
+//     ft_putchar_fd(c, 1);
+//     return (0);
 // }

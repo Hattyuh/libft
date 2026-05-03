@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rkosa <rkosa@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/01 11:15:35 by rkosa             #+#    #+#             */
+/*   Updated: 2026/05/02 12:37:46 by rkosa            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char    *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-    char	*dup;
+	char	*dup;
 	int		i;
 
 	dup = malloc(ft_strlen(str) + 1);
@@ -17,20 +29,18 @@ char    *ft_strdup(const char *str)
 	dup[i] = '\0';
 	return (dup);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int main(int argc, char **argv)
-{
-	char	*new_str;
 
-    if (argc == 2)
-    {
-        printf("Source string: %s, Source adress: %p\n", argv[1], &argv[1]);
-		new_str = ft_strdup(argv[1]);
-		printf("Dupped string: %s, Dupped adress: %p\n", new_str, &new_str);
-		free(new_str);
-    }
-    return(0);
-}
-*/
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	char	*str = "123";
+// 	char	*orig = strdup(str);
+// 	char	*mine = ft_strdup(str);
+// 	printf("string:          %s, adress: %p\n", str, str);
+// 	printf("Original strdup: %s, adress: %p\n", orig, orig);
+// 	printf("My strdup:       %s, adress: %p\n", mine, mine);
+// 	free(orig);
+// 	free(mine);
+//     return(0);
+// }

@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkosa <rkosa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/01 10:56:09 by rkosa             #+#    #+#             */
-/*   Updated: 2026/05/02 11:40:28 by rkosa            ###   ########.fr       */
+/*   Created: 2026/05/03 17:14:58 by rkosa             #+#    #+#             */
+/*   Updated: 2026/05/03 17:25:05 by rkosa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', 1);
+		n = -n;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
-// #include "libft.h"
-// #include <stdio.h>
-// #include <ctype.h>
-// int main(void)
+
+// int	main(void)
 // {
-// 	int	c = 97;
-// 	printf("Tested data:      %c - %d\n", c, c);
-// 	printf("Original toupper: %c - %d\n", toupper(c), toupper(c));
-// 	printf("My toupper:       %c - %d\n", ft_toupper(c), ft_toupper(c));
-// 	return(0);
+// 	int n = -214743648;
+// 	ft_putnbr_fd(n, 1);
+// 	return (0);
 // }

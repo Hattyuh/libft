@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkosa <rkosa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/01 10:56:09 by rkosa             #+#    #+#             */
-/*   Updated: 2026/05/02 11:40:28 by rkosa            ###   ########.fr       */
+/*   Created: 2026/05/03 17:13:33 by rkosa             #+#    #+#             */
+/*   Updated: 2026/05/03 17:13:34 by rkosa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
-// #include "libft.h"
-// #include <stdio.h>
-// #include <ctype.h>
+
 // int main(void)
 // {
-// 	int	c = 97;
-// 	printf("Tested data:      %c - %d\n", c, c);
-// 	printf("Original toupper: %c - %d\n", toupper(c), toupper(c));
-// 	printf("My toupper:       %c - %d\n", ft_toupper(c), ft_toupper(c));
-// 	return(0);
+//     char    *str = "123456789";
+//     ft_putstr_fd(str, 1);
 // }
