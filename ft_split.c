@@ -68,9 +68,7 @@ char	**ft_split(const char *str, char c)
 	wordcount = ft_countwords(str, c);
 	words = malloc((wordcount + 1) * sizeof(char *));
 	if (!words)
-	{
 		return (NULL);
-	}
 	inword = 0;
 	i = 0;
 	while (str[i])
@@ -98,13 +96,17 @@ char	**ft_split(const char *str, char c)
 
 int	main(void)
 {
-	char *str = "A few words that needs to be   separated";
-	char c = ' ';
-	char **words;
-	int i;
+	char	*str;
+	char	c;
+	char	**words;
+	int		i;
 
+	str = "A few words that needs to be   separated";
+	c = ' ';
 	words = ft_split(str, c);
 	i = 0;
+	if (!words)
+		return (0);
 	while (words[i])
 	{
 		printf("%s\n", words[i]);
